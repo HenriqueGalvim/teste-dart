@@ -1,3 +1,5 @@
+import '../enums/personagem.dart';
+
 class Personagem {
   String nome;
   String raca;
@@ -8,6 +10,7 @@ class Personagem {
   int vida;
   int energia;
   List<String> habilidades;
+  StatusVida statusVida = StatusVida.vivo;
 
   Personagem(this.nome, this.raca, this.classe, this.idade, this.altura,
       this.magico, this.vida, this.energia,this.habilidades) {}
@@ -29,5 +32,6 @@ class Personagem {
     for (String habilidade in this.habilidades) {
       print(" - ${habilidade}");
     }
+    print("\nStatus de vida: ${statusVida.name.toUpperCase()} ");
   }
 }
